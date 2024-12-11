@@ -124,8 +124,8 @@ exports.logout = async (req, res) => {
 
 		return res.cookie("token", null, {
 			httpOnly: true,
-			sameSite: "Strict",
-			secure: false,
+			sameSite: "None",
+			secure: true,
 			expires: new Date(Date.now())
 		})
 			.status(200)
