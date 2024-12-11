@@ -10,7 +10,11 @@ app.get("/", (req, res) => {
 			success: true,
 			message: 'server is up and  running '
 		})
-})
+}
+)
+
+const dbConnect = require("./config/database");
+dbConnect()
 
 const PORT = process.env.PORT || 4001;
 
