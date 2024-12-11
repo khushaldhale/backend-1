@@ -26,7 +26,7 @@ exports.signup = async (req, res) => {
 				})
 		}
 
-		const hashedPassword = bcrypt.hash(password, 10);
+		const hashedPassword = await bcrypt.hash(password, 10);
 		const response = await userSchema.create({ fname, lname, email, password: hashedPassword });
 
 		return res.status(200)
