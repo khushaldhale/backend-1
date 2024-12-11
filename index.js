@@ -10,6 +10,9 @@ app.use(cookie());
 
 const cors = require("cors");
 app.use(cors({
+
+	//  never  ever put * here  it wil not work in production 
+	//  it willl not work here 
 	origin: "http://localhost:3000",
 	//  so that we can accept the cookies  as well
 	credentials: true
